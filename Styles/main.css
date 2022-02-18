@@ -1,0 +1,168 @@
+/* Reset CSS*/
+:root{
+
+  --clr-primary: hsl(0, 0%, 10%);
+  --clr-secondary: hsl(0, 0%, 95%);
+  --clr-accent: hsl(5, 95%, 60%);
+
+  --font-principal: 'Aktiv Grotesk';
+  --font-title: 'Serat'
+
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primary: hsl(0, 0%, 95%);
+    --clr-secondary: hsl(0, 0%, 10%);
+  }
+}
+
+/* ⬇ OPCIONAL ⬇ */
+/* Modo alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --clr-primary: black;
+    --clr-secondary: white;
+  }
+}
+
+/* Modo no animaciones */
+@media (prefers-reduced-motion: reduce) {
+  * {
+  animation: none;
+  transition: none
+  }
+}
+
+/* ⬆ OPCIONAL ⬆*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  display: block;
+  /* Si tienen altura */ object-fit: cover;
+  /* Si tienen altura */ object-position: center center;
+}
+
+a {
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style: none
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary)
+}
+
+
+
+/* Reset CSS*/
+
+@font-face {
+  font-family: 'Serat';
+  src: url(../Assets/Fonts/SeratUltra.ttf);
+
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url(../Assets/Fonts/AktivGroteskCorp-Medium.woff);
+  font-weight: 500;
+  font-style: normal;
+}
+
+html > *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* a:active {
+  color: var(--clr-accent-500);
+} */
+
+/* a:visited {
+  color: var(--clr-accent-500)
+} */
+
+.observer {
+  color: var(--clr-accent)
+}
+
+.navbar{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1.5rem 2.5rem;
+  background-color: hsla(180, 80%, 80%, 0.7);
+  backdrop-filter: blur(.5rem)
+}
+
+.navbar--list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+header {
+  margin-top: 0
+}
+
+section {
+  height: 100vh;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 28px;
+}
+
+p {
+  font-family: var(--font-principal);
+  font-size: 18px;
+}
+
+.landing {
+  margin-top: 8rem
+}
+
+/*  
+  Para las partes de texto poner width de 40ch 
+  Object-fit: contain ó cover => para que las imágenes no salgan chafadas ni nada de eso 
+  En los hovers de imágenes solo cambiar escala y poco más, sino tiene muchas papeletas de romperse 
+
+
+*/
